@@ -187,3 +187,39 @@ To Resolve these conflicts
 VS Code being a smart editor suggests resolutions
 Incoming change --> changes that are coming from main branch
 Current change --> changes from our feature1 branch
+
+**Undoing changes**
+
+Case 1: *Staged chages*
+The changes that you have added but you can't commit
+Like you deleted few lines of code and then did git add
+But now you want all the removed lines of code back then you use 
+`git reset <-file name->`
+for single file use the above command
+`git reset` 
+for entire branch use this
+
+Case 2: *Commited Chages* (for one commit)
+`git reset HEAD~1`
+
+What does `HEAD~1` mean?
+Whenever you commit , all those commits are stored and the latest commit is called *HEAD*
+`HEAD~1` means take the HEAD to the previous commit and erase the current HEAD
+
+This command gets to the stage where you haven't yet add, or commit the change
+
+Case 3: *Commited Chages* (for many commit)
+`git reset <-commit hash->`
+Each commit has it's own hash [unquie number]
+
+which you can view from `git log`
+It contains all the commits we did to our code
+
+
+**Fork**
+A fork is a new repo that shares the code and visibility settings with the original "upstream" repository
+
+Let's for suppose want to work someone else's work [like in open source code]
+You open their repository , then click on [fork] --> [create new fork] --> give the clone repo a name
+Then you have their repo with you and you can make changes 
+And pull requests, the person managing the main base repo will review ur PR and comment or accept it
