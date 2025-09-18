@@ -61,3 +61,17 @@ so to resolve this issue you have to
 ]
 
 *syntax* --> `git push origin main`
+
+So what does this syntax mean
+
+By default , all the repositories of github, those are called remote repos
+Among those repos we choose one default repo , through which we can clone our code
+Which means on pushing, our code gets pushed to that default repo and that default repo's name is `origin`
+
+`main` 
+It is the branch name. In what branch our `origin` repo exists.
+
+**Init Command**
+- used to create a new git repo 
+- like when you build a project or write a simple code file in your computer but now you want to upload to git then this is used
+
