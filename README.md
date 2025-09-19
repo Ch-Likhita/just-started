@@ -1,225 +1,209 @@
 # just-started
-This is my first git repo and am learning to understand the git and github .
+This is my first git repo and am learning to understand Git and GitHub.
 
-In Github
-Commit is a 2 step process
-- the `commit` --> means the changes jo bi kiya usko tho pakka kar raha hai
-- after every commit , git stores the info ( saves ur commit ) and the date you commit
-- in order to change --> you `add` ( a change ) and then commit
+## 📌 Commit: A 2-Step Process
+- The `commit` → means the changes whatever you have done, you are fixing it.
+- After every commit, Git stores the info (saves your commit) and the date you commit.
+- In order to change → you `add` (a change) and then commit.
 
-**Clone** 
-- copy the link to clone from code dropdown of the git repo
-- create new folder and type `git clone [paste ur link here]`
-- your git repo get's cloned into the folder
+## 📥 Clone
+- Copy the link from the "Code" dropdown of the GitHub repo.
+- Create a new folder and type or Open any existing folder where you want to clone this repo:  
+  `git clone [paste your link here]`
+- Your Git repo gets cloned into the folder.
 
-**Commands**
-- `cd just-started` moves ur directory to ur repository [ just-started is the name of my repo, you have to type ur name there or use autotype]
-- `ls` it bascially shows the list of files in ur repo or in that directory
-- `ls -Hidden` shows hidden files, every git integrated file has `.git` folder to track ur changes
+## 🧭 Basic Commands
+- `cd just-started` → moves your directory to `just-started` repository (`just-started` is the name of my repo; you have to type your repository name there or use autotype).
+- `ls` → shows the list of files in your repo or in that directory.
+- `ls -a` → shows hidden files. Every Git-integrated folder has a `.git` folder to track your changes.
+ > In Vs Code Windows terminal, if that is not working then you can use `ls -Hidden`
 
-**Status**
-- `git status` it shows on what brach you are on and shows if you have saved or not saved ur file [ save --> commit ]
+## 🔍 Status
+- `git status` → shows what branch you are on
+    - whether you have saved (committed) your file 
+    - whether you have any changes to be made, like you have added but haven't commited
+    - you have commited but haven't pushed
 
-We have **4 types of status** 
-1. `untracked` --> new files that **git doesn't yet track**, even if you modify the file or add new stuff. If it is **newly added externally** from git then it is untracked
-2. `modified` --> Files that already exist but are modified/changed
-3. `unmodifed` --> Files that already exist but are unchanged
-4. `staged` --> 
-- after you `add` ur changed code then that becomes staged code 
-- something that is ready to `commit`
+### Git Status Types
+1. `untracked` → new files that **Git doesn't yet track**, even if you modify or add new stuff.
+2. `modified` → files that already exist but are changed.
+3. `unmodified` → files that already exist and are unchanged.
+4. `staged` → after you `add` your changed code, it becomes staged and ready to `commit`.
 
-To Track changes , git uses 2 commands
+## ✍️ Tracking Changes
+Git uses two commands:
 1. `add`
 2. `commit`
 
-**Add**
-- Adds new or changed files in your working directory to the Git staging area
+### Add
+Adds new or changed files in your working directory to the Git staging area.
 
-[Staging area --> It's the area where the unmodified and untracked files exist]
+> Staging area → where the unmodified and untracked files exist.
 
-To add single files:-
-*syntax* --> `git add <-file name->`
+To add a single file:  
+`git add <file name>`
 
-To add all files:-
-*syntax* --> `git add .`
+To add all files:  
+`git add .`
 
-**Commit** 
-- It is the record of the change
-*syntax* --> `git commit -m "some message"`
-here `-m` means your commit has some message
+### Commit
+Records the change.  
+Syntax:  
+`git commit -m "some message"`  
+Here `-m` means your commit has a message.
 
-what you have saved now , won't show on the github page as it is locally saved in ur laptop
+> What you have saved now won't show on the GitHub page — it's saved locally on your laptop.
 
-so to resolve this issue you have to
+## 🚀 Push
+Uploads local repo content to the remote repo.
 
-**PUSH**
-- upload local repo content to remote repo
+- **Local repo** → saved on your laptop or PC  
+- **Remote repo** → saved on GitHub
 
-[
-    **Local repo** - the repository is saved in ur laptop or pc 
-    **Remote repo** - the repository is saved in the github
-]
+Syntax:  
+`git push origin main`
 
-*syntax* --> `git push origin main`
+### What does this mean?
+- All GitHub repositories are remote repos.
+- We choose one default remote repo to push to — called `origin`.
+- `main` is the branch name where the `origin` repo exists.
 
-So what does this syntax mean
+You can also use:  
+`git push -u origin main`  
+`-u` sets upstream, so next time you can simply type:  
+`git push`
 
-By default , all the repositories of github, those are called remote repos
-Among those repos we choose one default repo , through which we can clone our code
-Which means on pushing, our code gets pushed to that default repo and that default repo's name is `origin`
+> You might be wondering what upstream means, It simply means that you would always push your commited changes to `origin main` 
+> 
+> It is to ease your process of typing, You can also do `git push -u origin feature1`
+> 
+> if you are always going to push to `feature1` branch
 
-`main` 
-It is the branch name. In what branch our `origin` repo exists.
+## 🛠️ Init Command
+Used to create a new Git repo.
 
-We can also use 
-`git push -u origin main` 
-now what does this `-u` mean
-It means to set upstream
-which means when you are working on a project for long time and for acd ll the time you are pushing to origin main
-then you can use this command to automate it
+If you build a project or write a code file locally and want to upload it to GitHub:  
+`git init`
 
-so next time all you have to do is type
-`git push` and your code gets pushed to origin main
+To add a new remote repo from local:  
+`git remote add origin <link>`
 
-
-**Init Command**
-- used to create a new git repo 
-- like when you build a project or write a simple code file in your computer but now you want to upload to git then this is used
-
-*syntax* --> `git init`
-
-Now to add new repo in github from local we use
-`git remote add origin <-link->`
-and the name of the file place is origin
-by default we keep origin as it is widely used
-
-To check to what remote repo have we added our file use
+To check which remote repo you've added:  
 `git remote -v`
 
-**WorkFlow of Github**
-1. Creation of github repository [ remote file ] 
-2. `clone` the repo into local file
-3. Changes made in the code
-[ do not forget to save the files in vs code or else the changes will not be noted in the terminal ]
+## 🔄 GitHub Workflow
+1. Create GitHub repository (remote file).
+2. `clone` the repo into local file.
+3. Make changes in the code.  
+   *(Don't forget to save files in VS Code or changes won't reflect in terminal.)*
 4. `add`
 5. `commit`
 6. `push`
 
-**Branch** 
-- for suppose there are 3 teams
-1. frontend 
-2. Backend
+## 🌿 Branching
+Suppose there are 3 teams:
+1. Frontend  
+2. Backend  
 3. Bug fix
 
-There will be a main branch
-Each team will take their own branches from the main branch
-And from which point they take, from that point onwards they get a copy of the code/repo
+There will be a main branch.  
+Each team creates their own branches from the main branch.  
+From that point onward, they get a copy of the code/repo.
 
-<img title="Git_Branches" alt="Git Branches pic" src="/just-started/GIt_Branches.png">
+![Git Branches pic](just-started/GIt_Branches.png)
 
-This tree like looking structure is called **Working Tree**
+This tree-like structure is called the **Working Tree**.
 
-`git branch` --> to check on what branch you are on
+### Branch Commands
+- Check current branch:  
+  `git branch`
+- Rename branch:  
+  `git branch -M newName`
+- Switch to another branch:  
+  `git checkout <branch name>`
+- Create new branch:  
+  `git checkout -b <new branch name>`
+- Delete branch:  
+  `git branch -d <branch name>`
 
-To Rename your git branch 
-`git branch -M newName`
+## 🔀 Merging Code
 
-To Move to another branch
-`git checkout <-branch name->`
+### Using Terminal
+1. Compare branches:  
+   `git diff <branch name>`  
+   Shows every change between your current branch and the one you're comparing.
 
-To Create New Branches 
-`git checkout -b <-new branch name->`
+   > Press `q` to exit scroll.
+   > If terminal shows `[END]`, It means the end of output and the output would be repeated if you keep scrolling down.
 
-To Delete Branches
-`git checkout -d <-new branch name->`
+2. Merge branches:  
+   `git merge <branch name>`  
+   When two branches' code becomes the same, you can merge them.
 
-**Merging Code**
-Using Terminal->
-1. `git diff <-branch name->`
-This is to compare the code from the branch that you are in and the branch name you want to check with
+### Using GitHub
+1. Create a **PR** (Pull Request)  
+   Lets others know about changes you've pushed to a branch.
 
-This would give you each change that happened , even tiny details
+   > If many people work on a project and want to merge with `main` branch of base repo, they create a PR.
 
-Sometimes ur terminal would run a code infintely [END] with something like this at the end, then just press `q` and it will stop the infite operation from happening and return to ur terminal input
+2. **PR Review**  
+   Senior dev (or maintainer) reviews your code and comments or approves it.
 
-2. `git merge <-branch-name->`
-This is to merge 2 branches
-When 2 branches code becomes the same then you can merge them
+## 📥 Pull Command
+Fetches and downloads content from a remote repo and updates your local repo.
 
-Using Github->
-1. Create a **PR**
-**PR** means a *Pull request*
-It lets you tell others about the changes you've pushed to a branch in a repository on GitHub
-
-Let's say a lot of people are woring on a single project and all of them wants to merge with the main then they pull this pull request
-
-So when you do this, The main branches Senior developer [could be anyone but here for instance] , they will review your code --> this is called **PR Review** and comment over it.
-
-**PULL COMMAND**
-Used to fetch and download content from a remote repo and immediately update the local repo to match the content
-
+Syntax:  
 `git pull origin main`
 
-**Resolving Merge Conflicts**
-An event that takes place when Git is unable to automatically resolve the differnences in code between two commits
+## ⚔️ Resolving Merge Conflicts
+Occurs when Git can't automatically resolve differences between two commits.
 
-In simple words
-When the code in one branch differs from the code in other branch , like same sentence but different wording, for suppose
+Example:
 
+**Main branch:**
 ```html
 <p>New repo created</p>
 <p>This is a new feature [button]</p>
 ```
-This is from main branch
 
+**Feature1 branch:**
 ```html
 <p>New repo created</p>
 <p>This is a new feature [dropdown]</p>
 ```
-This is from feature1 branch
 
-Then git won't be able to tell which commit should it commit, heh get the pun
-sorry about my humor but anyway
+Git can't decide which to keep — this causes a merge conflict.
 
-Git wouldn't know what to save and merge, this causes merge conflicts
+You are on `feature1` branch and typed `git merge main` 
+Your resolutions by the smart editor would be as follows:
 
-To Resolve these conflicts 
-VS Code being a smart editor suggests resolutions
-Incoming change --> changes that are coming from main branch
-Current change --> changes from our feature1 branch
+### Resolution
+VS Code suggests: 
+- **Incoming change** → accept changes from main branch
+- **Current change** → accept changes from your feature1 branch
 
-**Undoing changes**
+## ⏪ Undoing Changes
 
-Case 1: *Staged chages*
-The changes that you have added but you can't commit
-Like you deleted few lines of code and then did git add
-But now you want all the removed lines of code back then you use 
-`git reset <-file name->`
-for single file use the above command
-`git reset` 
-for entire branch use this
+### Case 1: Staged Changes
+You added changes but haven't committed yet.  
+To undo:  
+- Single file: `git reset <file name>`  
+- Entire branch: `git reset`
 
-Case 2: *Commited Chages* (for one commit)
-`git reset HEAD~1`
+### Case 2: One Commit
+`git reset HEAD~1`  
+Moves HEAD to the previous commit and erases the current one.
 
-What does `HEAD~1` mean?
-Whenever you commit , all those commits are stored and the latest commit is called *HEAD*
-`HEAD~1` means take the HEAD to the previous commit and erase the current HEAD
+### Case 3: Multiple Commits
+`git reset <commit hash>`  
+Each commit has a unique hash (viewable via `git log`).
 
-This command gets to the stage where you haven't yet add, or commit the change
+## 🍴 Fork
+A fork is a new repo that shares code and visibility with the original "upstream" repo.
 
-Case 3: *Commited Chages* (for many commit)
-`git reset <-commit hash->`
-Each commit has it's own hash [unquie number]
+If you want to work on someone else's project:
+1. Open their repo.
+2. Click **Fork** → **Create new fork** → Name it.
+3. You now have their repo and can make changes.
+4. Create a PR — the maintainer will review and accept or comment.
 
-which you can view from `git log`
-It contains all the commits we did to our code
-
-
-**Fork**
-A fork is a new repo that shares the code and visibility settings with the original "upstream" repository
-
-Let's for suppose want to work someone else's work [like in open source code]
-You open their repository , then click on [fork] --> [create new fork] --> give the clone repo a name
-Then you have their repo with you and you can make changes 
-And pull requests, the person managing the main base repo will review ur PR and comment or accept it
