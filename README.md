@@ -13,6 +13,7 @@ This is my first git repo.
 - Create a new folder and type or Open any existing folder where you want to clone this repo:  
   `git clone [paste your link here]`
 - Your Git repo gets cloned into the folder.
+> when you clone it creates a folder with the name of the repo in your folder.
 
 ## 🧭 Basic Commands
 - `cd just-started` → moves your directory to `just-started` repository (`just-started` is the name of my repo; you have to type your repository name there or use autotype).
