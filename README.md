@@ -110,7 +110,7 @@ There will be a main branch.
 Each team creates their own branches from the main branch.  
 From that point onward, they get a copy of the code/repo.
 
-![Git Branches pic](just-started/GIt_Branches.png)
+![Git Branches pic](GIt_Branches.png)
 
 This tree-like structure is called the **Working Tree**.
 
