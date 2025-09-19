@@ -1,5 +1,7 @@
 # just-started
-This is my first git repo and am learning to understand Git and GitHub.
+This is my first git repo.
+> 📝 These are my personal notes from the [Apna College Git & GitHub Tutorial](https://youtu.be/Ez8F0nW6S-w?si=d-SCm0I9NTHsE6FH).
+
 
 ## 📌 Commit: A 2-Step Process
 - The `commit` → means the changes whatever you have done, you are fixing it.
